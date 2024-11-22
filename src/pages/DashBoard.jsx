@@ -57,7 +57,7 @@ const DashBoard = () => {
             <DashboardSection />
             </div>
           </div>
-          <div className="md:col-span-4 col-span-12 shadow bg-white h-screen    ">
+          <div className="md:col-span-4 col-span-12 shadow bg-white    ">
             <Header />
             <RecentStudents />
             <Messages />

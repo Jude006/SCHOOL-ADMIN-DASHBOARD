@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Sample Food Data
+
 const foodItems = [
   {
     id: 1,
@@ -35,7 +35,7 @@ const foodItems = [
 const FoodCards = () => {
   return (
     <section className="md:px-6 px-2 py-14 bg-white">
-      {/* Header */}
+      
       <div className="mb-6">
         <motion.p
           initial={{ opacity: 0, x: -20 }}
