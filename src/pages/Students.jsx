@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import SideBar from "../components/SideBar";
-import NavBar from "../components/NavBar";
 import { motion, AnimatePresence } from "framer-motion";
+import SideNav from "../components/SideNav";
+import StudentManagement from "../components/StudentManagement";
 
 const Students = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -43,12 +44,11 @@ const Students = () => {
       </AnimatePresence>
 
       {/* my main  content */}
-      <div className="flex-1">
-        <main className="h-[130vh] overflow-y-auto grid grid-cols-12 gap-4">
-          <div className="md:col-span-8 col-span-12 shadow bg-white">
-            <NavBar sideBar={sideBar} setSideBar={setSideBar} title='Students' />
-          </div>
-          <div className="md:col-span-4 col-span-12 shadow bg-white"></div>
+      <div className="flex-1 md:px-8 overflow-x-hidden">
+        <main className=" overflow-y-auto ">
+           <SideNav title='Students'  sideBar={sideBar} setSideBar={setSideBar} />
+           {/* <SideNav2 /> */}
+           <StudentManagement />
         </main>
       </div>
     </div>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import SideBar from "../components/SideBar";
-import NavBar from "../components/NavBar";
 import { motion, AnimatePresence } from "framer-motion";
+import SideNav3 from "../components/SideNav3";
+import ChatSection from "../components/ChatSection";
 
 const Chat = () => {
   const [sideBar, setSideBar] = useState(false);
@@ -16,7 +17,7 @@ const Chat = () => {
         <SideBar sideBar={sideBar} setSideBar={setSideBar} />
       </motion.div>
 
-      {/* Mobile Sidebar */}
+
       <AnimatePresence>
         {sideBar && (
           <motion.div
@@ -45,10 +46,12 @@ const Chat = () => {
 
       {/* my main  content */}
       <div className="flex-1">
-        <main className="h-[130vh] overflow-y-auto  gap-4">
-          <div className=" shadow bg-white h-full">
-            <NavBar sideBar={sideBar} setSideBar={setSideBar} title='Chat' />
+      <main className=" overflow-y-auto  gap-4">
+          <div className=" shadow">
+          <SideNav3 title='Chats'  sideBar={sideBar} setSideBar={setSideBar} />
+        <ChatSection />
           </div>
+      
         </main>
       </div>
     </div>

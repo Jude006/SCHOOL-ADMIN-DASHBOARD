@@ -56,7 +56,7 @@ const FoodCards = () => {
       </div>
 
       {/* Food Cards */}
-      <main className="flex flex-col gap-3">
+      <main className="flex flex-col  gap-3">
         {foodItems.map((food, index) => (
           <motion.div
             key={food.id}
